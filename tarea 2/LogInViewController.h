@@ -14,6 +14,7 @@
 
 //array
 @property (strong, nonatomic) NSMutableArray *myArrayPets;
+@property (strong,nonatomic) NSMutableArray *images;
 //idk
 //@property (strong, nonatomic) myCellController *controllerObject;
 

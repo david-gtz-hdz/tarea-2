@@ -118,16 +118,23 @@
                                                         <constraint firstAttribute="width" constant="108" id="osa-er-LIE"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Your Pet`s Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVx-Vs-lM6">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="J2Q-yg-fJo" secondAttribute="trailing" constant="55" id="49a-9S-r8X"/>
+                                            <constraint firstItem="tvy-jd-oS3" firstAttribute="centerX" secondItem="J2Q-yg-fJo" secondAttribute="centerX" type="default" id="0cH-Ew-zAz"/>
+                                            <constraint firstItem="J2Q-yg-fJo" firstAttribute="top" secondItem="jeM-i1-Uwi" secondAttribute="top" constant="46" id="2m2-10-0Tq"/>
+                                            <constraint firstAttribute="trailing" secondItem="J2Q-yg-fJo" secondAttribute="trailing" constant="7" id="Awt-GD-3YN"/>
+                                            <constraint firstAttribute="trailing" secondItem="iVx-Vs-lM6" secondAttribute="trailing" constant="12" id="Bz2-ki-NUs"/>
+                                            <constraint firstItem="iVx-Vs-lM6" firstAttribute="top" secondItem="jeM-i1-Uwi" secondAttribute="top" constant="11" id="DND-WB-MAR"/>
                                             <constraint firstItem="ucd-3N-Rq3" firstAttribute="leading" secondItem="jeM-i1-Uwi" secondAttribute="leading" constant="20" type="default" id="JJU-Rh-swH"/>
-                                            <constraint firstItem="J2Q-yg-fJo" firstAttribute="top" secondItem="jeM-i1-Uwi" secondAttribute="top" constant="68" id="K6h-Sg-o30"/>
-                                            <constraint firstItem="tvy-jd-oS3" firstAttribute="centerX" secondItem="J2Q-yg-fJo" secondAttribute="centerX" type="default" id="LsM-iW-Bat"/>
                                             <constraint firstItem="ucd-3N-Rq3" firstAttribute="top" secondItem="jeM-i1-Uwi" secondAttribute="top" constant="31" id="Nm3-u0-CzM"/>
-                                            <constraint firstItem="tvy-jd-oS3" firstAttribute="top" secondItem="J2Q-yg-fJo" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="whd-x1-ZwS"/>
+                                            <constraint firstItem="tvy-jd-oS3" firstAttribute="top" secondItem="J2Q-yg-fJo" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hYz-xC-f84"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="imgePet" destination="ucd-3N-Rq3" id="sWu-Z8-l3a"/>
@@ -173,6 +180,33 @@
             <point key="canvasLocation" x="457" y="68"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="LogInViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LogInViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="myTableViewHW" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="LogButton:"/>
+                <relationship kind="outlet" name="PassWordText" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="UserText" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="myCellController" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/myCellController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imgePet" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="myLabelPet" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="myTextCell" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

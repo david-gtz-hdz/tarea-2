@@ -18,6 +18,7 @@
 @synthesize myTableViewHW;
 //array
 @synthesize myArrayPets;
+@synthesize images; 
 
 - (void)viewDidLoad
 {
@@ -27,10 +28,24 @@
     //array
     myArrayPets   = [[NSMutableArray alloc]init];
     [myArrayPets addObject:@"Dog1"];
-    [myArrayPets addObject:@"Dog2"];
+    [myArrayPets addObject:@"Cat2"];
+    [myArrayPets addObject:@"Dog3"];
     
+    //images
+
+    images = [NSMutableArray new];
+    UIImage *Image1= [UIImage imageNamed:@"images.jpeg"];
+    [images addObject:Image1];
+    UIImage *Image2= [UIImage imageNamed:@"gato-lindo.jpg"];
+    [images addObject:Image2];
+    UIImage *Image3= [UIImage imageNamed:@"images (1).jpeg"];
+    [images addObject:Image3];
+   
     
 }
+
+//heigh images
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
 
@@ -43,7 +58,8 @@
     myCellController *cell1 = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
     cell1.myLabelPet.text = [myArrayPets objectAtIndex:indexPath.row];
-    cell1.imgePet.image = [UIImage imageNamed:@"images.jpeg"];
+
+    cell1.imageView.image = [images objectAtIndex:indexPath.row];
     cell1.myLabelPet.text = [myArrayPets objectAtIndex:indexPath.row];
     
     return cell1;
